@@ -32,6 +32,7 @@
  */
  
   echo "test is test for git hub rebo";
+  echo "test123";
 	define('APP_DIR', 'app');
 	define('DS', DIRECTORY_SEPARATOR);
 	define('ROOT', dirname(__FILE__));
