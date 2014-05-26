@@ -1,0 +1,43 @@
+<?php echo $javascript->link('prototype'); ?>
+<?php echo $javascript->link('scriptaculous.js?load=effects'); ?>
+
+<div id="content">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><?php echo $this->renderElement('leftmenu',$left); ?></td>				 
+					
+					<td valign="top" width="680"><? echo $html->image('home1.jpg',array('width'=>'680'))?>
+					<div class="spacer"></div><h2>
+					<? if($id==4) echo "Links";
+					   elseif($id==2) echo "Press";
+					   elseif($id==3) echo "Resource";
+					   elseif($id==1) echo "News";
+					   elseif($id==5) echo "Process";
+					    elseif($id==6) echo "Our Story";
+						elseif($id==7) echo "Clients";
+						elseif($id==9) echo "Careers";
+						elseif($id==10) echo "Contact";
+					 ?></h2>
+					<p><? if(isset($home)) echo $home ?></p>
+					<div class="spacer"></div>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					
+						<? if(!empty($data)) { 
+						     foreach($data as $list) { ?>
+						<tr>
+							<td>
+							 <span><strong><? echo $list['othercategories']['title'] ?></strong></span>
+								<p><? echo $list['othercategories']['matter'] ?></p>
+								<a href="#">www.link.link.com</a>
+								<div class="spacer"></div>
+							
+							</td>
+							<td align="right"><? echo $html->image($list['othercategories']['imagename'],array('vspace'=>'10','hspace'=>'10')) ?></td>
+						</tr>
+						<? }} ?>
+						
+					</table></td>
+			</tr>
+					
+		</table>
+	</div>

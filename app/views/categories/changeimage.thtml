@@ -1,0 +1,3 @@
+<? $ajax->div($id);?>
+<? echo $html->image('../bigphotos/'.$image) ?>
+<? $ajax->divEnd($id);?>

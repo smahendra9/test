@@ -1,0 +1,27 @@
+<?php echo $javascript->link('prototype'); ?>
+<?php echo $javascript->link('scriptaculous.js?load=effects'); ?>
+
+<div id="content">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><?php echo $this->renderElement('leftmenu',$left); ?></td>
+				 
+					<div class="spacer"></div>
+					<td valign="top" width="680"><h3><? echo $data[0]['contents']['title']?></h3>
+					<p><? echo $data[0]['contents']['matter']?></p>
+					<div class="spacer"></div>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					
+						<tr>
+							<td><? if(isset($data[0]['images']['photoname'])) echo '<div class="titlepic" id='.$data[0]['contents']['id'].'>'.$html->image('../photos/'.$data[0]['images']['photoname']).'</div>'?></td>
+							<td align="right"><? if(isset($data[1]['images']['photoname'])) echo '<div class="titlethumb">'.$ajax->link($html->image('../photos/'.$data[1]['images']['photoname'],array('border'=>'0')),'changeimage/'.$data[0]['images']['photoname'].'/'.$data[0]['contents']['id'],array('update'=>$data[0]['contents']['id'],'loading' => 'Effect.BlindUp('.$data[0]['contents']['id'].')'),null,false).'</div>'?>
+								<? if(isset($data[2]['images']['photoname'])) echo '<div class="titlethumb">'.$ajax->link($html->image('../photos/'.$data[2]['images']['photoname'],array('border'=>'0')),'changeimage/'.$data[0]['images']['photoname'].'/'.$data[0]['contents']['id'],array('update'=>$data[0]['contents']['id']),null,false).'</div>'?>
+								<? if(isset($data[3]['images']['photoname'])) echo '<div class="titlethumb">'.$ajax->link($html->image('../photos/'.$data[3]['images']['photoname'],array('border'=>'0')),'changeimage/'.$data[0]['images']['photoname'].'/'.$data[0]['contents']['id'],array('update'=>$data[0]['contents']['id']),null,false).'</div>'?></td>
+						</tr>
+					</table></td>
+			</tr>
+					<div class="spacer"></div>
+					</td>
+			</tr>
+		</table>
+	</div>

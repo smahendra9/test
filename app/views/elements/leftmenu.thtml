@@ -1,0 +1,52 @@
+<ul>
+						<li><? echo $html->link('Home','index') ?></li>
+						<li><? echo $html->link('Our Story','othercategory/6') ?></li>
+						<li><? echo $html->link('Process','othercategory/5') ?></li>
+						<li><? echo $html->link('Clients','othercategory/7') ?></li>
+						<li>&nbsp;</li>
+						<li><a href="#">Work</a><br />
+
+							<ul>
+							
+							
+							   
+					   <? 
+							  $id="";
+							  $i=0;
+							  foreach($left as $data)
+							  {
+									if($id=="")
+										$id=$data['categories']['id'];
+									
+								    if($id==$data['subcategories']['category_id'])
+									{
+										    
+										
+										if($i==0)
+										  echo '<li><a href="#">'.$data['categories']['catname'].'</a><ul>';
+										echo '<li>'.$html->link($data['subcategories']['subcatname'],'category/'.$data['subcategories']['id']).'</li>';
+										$i++;
+										$id=$data['subcategories']['category_id'];
+										
+								     }
+									 else
+									 {
+									    $i=0;
+										$id=$data['categories']['id'];
+										echo "</ul></li>";
+										
+									 }	
+									 
+							  }	
+						?>
+								
+							</ul>
+						</li>
+						<li><? echo $html->link('News','othercategory/1') ?></li>
+						<li><? echo $html->link('Press','othercategory/2') ?></li>
+						<li><? echo $html->link('Resource','othercategory/3') ?></li>
+						<li><? echo $html->link('Careers','othercategory/9') ?></li>
+						<li><? echo $html->link('Links','othercategory/4') ?></li>
+						<li>&nbsp;</li>
+						<li><? echo $html->link('Contact','othercategory/10') ?></li>
+					</ul>

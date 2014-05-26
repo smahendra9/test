@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin:0;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+td {
+	vertical-align:top;
+}
+h1 {
+	font-weight:normal;
+	font-family:'Arial black', sans-serif;
+	text-transform:uppercase;
+	font-size:18px;
+}
+.pink h1, .pink h5 {
+	padding:60px 0 0 0;
+	color:#FFFFFF;
+}
+h1, h5 {
+	padding:25px 0 0 0;
+	color:#FFFFFF;
+}
+h2 {
+	margin:0;
+	padding:3px 0;
+	font-size:18px;
+	color:#ff0036;
+}
+h3 {
+	color:#595858;
+	font-size:15px;
+}
+p {
+	margin:0;
+	padding:0;
+}
+ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	line-height:20px;
+}
+ul ul {
+	margin:0 0 0 10px;
+	padding:0;
+	list-style:none;
+}
+ul ul ul {
+	margin:0 0 0 15px;
+	padding:0;
+	list-style:none;
+}
+ul a:link, ul a:visited {
+	font-weight:bold;
+	color:#333333;
+	text-decoration:none;
+}
+ul a:hover {
+	text-decoration:underline;
+}
+a:link, a:visited {
+	color:#0066CC;
+	text-decoration:none;
+}
+a:hover {
+	color:#0066FF;
+	text-decoration:underline;
+}
+#wraper {
+}
+.pink {
+	background:url(http://localhost/myproject/img/header_bg1.gif) repeat-x;
+}
+.orange {
+	background:url(http://localhost/myproject/img/header_bg2.gif) repeat-x;
+}
+.brown {
+	background:url(http://localhost/myproject/img/header_bg3.gif) repeat-x;
+}
+#header, #content {
+	margin:auto;
+	width:893px;
+}
+.titlepic {
+	border:2px solid #666666;
+}
+.titlethumb {
+	margin:0 0 6px 0;
+	width:136px;
+	border:1px solid #666666;
+}
+.spacer {
+	margin:0;
+	padding:0;
+	clear:both;
+	height:10px;
+	font-size:1px;
+}
+.spacer2 {
+	margin:0;
+	padding:0;
+	clear:both;
+	height:8px;
+	font-size:1px;
+}
+.linkimg {
+	padding:20px 0;
+}
